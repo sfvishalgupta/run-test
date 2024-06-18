@@ -1,5 +1,6 @@
 
 #!/bin/usr/env bash
+rm -rf src/lb4
 mkdir src/
 git clone https://github.com/sourcefuse/loopback4-microservice-catalog.git src/lb4
 
@@ -7,7 +8,6 @@ myArray=(
     "services"
     "sandbox"
 )
-cp start-test.sh src/lb4/
 cp .nycrc src/lb4/
 cp formated-output.js src/lb4/
 cd src/lb4/

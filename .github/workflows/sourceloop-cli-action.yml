@@ -1,4 +1,4 @@
-name:  "Run Tests"
+name:  "Run Sourceloop CLI Action"
 on:
   push:
     branches: [ main ]
@@ -7,7 +7,7 @@ permissions:
   contents: write
 
 jobs:
-  build:
+  build-sourceloop-cli:
     runs-on: ubuntu-latest
     permissions:
       id-token: write
@@ -18,15 +18,15 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       
-      - name: Set up Python 3.8
-        uses: actions/setup-python@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
         with:
-          python-version: 3.8
-
+          node-version: 18
+      
       - name: Install dependencies
         run: |
-          python -m pip install --upgrade pip
-          pip install csvkit
-
+          npm i -g @loopback/cli
+          npm i -g @sourceloop/cli          
+      
       - name: git checkout of loopback
-        run: ./start-test.sh
+        run: ./scripts/start-sourceloop-cli-test.sh
