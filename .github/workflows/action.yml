@@ -1,0 +1,13 @@
+name:  "Run Tests"
+jobs:
+  run_tests:
+    name: Run Tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: git checkout
+        id: poc_apply
+        shell: bash
+        run: |
+          ./start-test.sh
+        continue-on-error: false
