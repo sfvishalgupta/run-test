@@ -28,5 +28,5 @@ jobs:
           npm i -g @loopback/cli
           npm i -g @sourceloop/cli          
       
-      - name: git checkout of loopback
+      - name: Setup Sourceloop CLI
         run: ./scripts/start-sourceloop-cli-test.sh
