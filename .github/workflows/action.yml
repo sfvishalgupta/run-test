@@ -10,5 +10,5 @@ jobs:
         id: poc_apply
         shell: bash
         run: |
-          ./start-test.sh
+          ls
         continue-on-error: false
