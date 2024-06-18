@@ -1,9 +1,12 @@
 
 #!/bin/usr/env bash
+git clone https://github.com/sourcefuse/loopback4-microservice-catalog.git
+
 myArray=(
     "services" 
     "sandbox"
 )
+ls -al
 echo "Runing...."
 exit
 
