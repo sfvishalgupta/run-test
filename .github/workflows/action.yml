@@ -15,8 +15,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: git checkout
-        id: poc_apply
+      - name: git checkout of loopback
+        id: git_checkout_lb
         shell: bash
         run: |
           ./start-test.sh
