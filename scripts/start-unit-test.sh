@@ -1,7 +1,7 @@
 
 #!/bin/usr/env bash
-rm -rf src/lb4
 mkdir src/
+rm -rf src/lb4
 git clone https://github.com/sourcefuse/loopback4-microservice-catalog.git src/lb4
 
 myArray=(
