@@ -5,6 +5,7 @@ git clone https://github.com/sourcefuse/loopback4-microservice-catalog.git src/l
 
 myArray=(
     "services"
+    "sandbox"
 )
 cp start-test.sh src/lb4/
 cp .nycrc src/lb4/
