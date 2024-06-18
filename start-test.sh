@@ -42,7 +42,6 @@ for str in ${myArray[@]}; do
         functions=$(jq .total.functions.pct coverage/coverage-summary.json)
         branches=$(jq .total.branches.pct coverage/coverage-summary.json)
         coverage+="$str/$folder:$statements:$branches:$functions:$lines\n"
-        break
     done
     node $currentPath/formated-output.js $currentPath/$str
 done
