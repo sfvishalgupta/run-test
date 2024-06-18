@@ -8,10 +8,9 @@ myArray=(
 )
 cp start-test.sh lb4/
 cp .nycrc lb4/
+cp formated-output.js lb4/
 cd lb4/
 echo "Running tests"
-ls -al
-exit
 
 currentPath=$(pwd)
 coverage=""
