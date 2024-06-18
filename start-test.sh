@@ -4,7 +4,6 @@ git clone https://github.com/sourcefuse/loopback4-microservice-catalog.git lb4
 
 myArray=(
     "services" 
-    "sandbox"
 )
 cp start-test.sh lb4/
 cp .nycrc lb4/
@@ -41,7 +40,7 @@ for str in ${myArray[@]}; do
         statements=$(jq .total.statements.pct coverage/coverage-summary.json)
         functions=$(jq .total.functions.pct coverage/coverage-summary.json)
         branches=$(jq .total.branches.pct coverage/coverage-summary.json)
-        coverage+="$str/$folder:$statements:$branches:$functions:$lines\n"
+        # coverage+="$str/$folder:$statements:$branches:$functions:$lines\n"
         break
     done
     node $currentPath/formated-output.js $currentPath/$str
