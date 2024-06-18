@@ -1,13 +1,16 @@
 
 #!/bin/usr/env bash
-git clone https://github.com/sourcefuse/loopback4-microservice-catalog.git
+git clone https://github.com/sourcefuse/loopback4-microservice-catalog.git lb4
 
 myArray=(
     "services" 
     "sandbox"
 )
+cp start-test.sh lb4/
+cp .nycrc lb4/
+cd lb4/
+echo "Running tests"
 ls -al
-echo "Runing...."
 exit
 
 currentPath=$(pwd)
